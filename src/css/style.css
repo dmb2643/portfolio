@@ -77,11 +77,52 @@ html, *, body {
   max-width: 1400px;
 }
 
-.header__logo {
-  position: relative;
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.05vw;
+  background: #ffffff;
+  color: #000000;
+  width: 11.25em;
+  height: 4.25em;
+  border-radius: 1.25em;
 }
 
-.header__menu {
+@font-face {
+  font-family: "inter";
+  src: url(../fonts/InterBold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "inter";
+  src: url(../fonts/InterRegular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.info {
+  font-family: "inter";
+}
+
+.title-small {
+  font-weight: 700;
+  font-size: 3.4vw;
+  font-weight: 710;
+}
+
+.subtitle {
+  font-size: 2vw;
+  white-space: nowrap;
+}
+
+.section-text {
+  font-size: clamp(16px, 1.3vw, 22px);
+}
+
+.header__logo {
   position: relative;
 }
 
@@ -89,10 +130,14 @@ html, *, body {
   content: "";
   position: absolute;
   left: 145px;
-  top: -18px;
+  top: -15px;
   background: url(../icons/header__figure.svg) 100%/100% no-repeat;
   width: 60px;
   height: 47px;
+}
+
+.header__menu {
+  position: relative;
 }
 
 .header__menu::before {
@@ -105,19 +150,105 @@ html, *, body {
   right: 625px;
 }
 
+.info__left-wrapper {
+  position: relative;
+}
+
+.info__left-wrapper::before {
+  content: "";
+  background: url(../icons/info__figure.svg) 99%/100% no-repeat;
+  position: absolute;
+  right: 22%;
+  top: 80%;
+  width: clamp(45px, 3.9vw, 90px);
+  aspect-ratio: 1;
+}
+
+.info__left-wrapper::after {
+  content: "";
+  background: url(../icons/info__figure.svg) 99%/100% no-repeat;
+  position: absolute;
+  right: 7%;
+  top: 24%;
+  width: clamp(45px, 3.9vw, 90px);
+  aspect-ratio: 1;
+}
+
+.info__button {
+  position: relative;
+}
+
+.info__button::before {
+  content: "";
+  background: url(../icons/info__figure.svg) 99%/100% no-repeat;
+  position: absolute;
+  left: 28vw;
+  top: 20vh;
+  width: clamp(45px, 3.9vw, 90px);
+  aspect-ratio: 1;
+}
+
+.info__button::after {
+  content: "";
+  background: url(../icons/info__figure.svg) 99%/100% no-repeat;
+  position: absolute;
+  right: 45%;
+  top: 400%;
+  width: clamp(45px, 3.9vw, 90px);
+  aspect-ratio: 1;
+}
+
+.info__figure {
+  position: absolute;
+  left: 48vw;
+  top: 90vh;
+  width: clamp(45px, 3.9vw, 90px);
+  aspect-ratio: 1;
+}
+
 .header {
+  font-family: "inter";
   font-size: clamp(16px, 1.6vw, 20px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 85px 0px 85px;
+  padding: 25px 25px 0px 85px;
   max-height: 100px;
+}
+.header__logo {
+  top: -10px;
 }
 .header__menu-list {
   display: flex;
   column-gap: 37px;
   font-weight: 700;
   white-space: nowrap;
+}
+
+.header__menu-item.is-current {
+  position: relative;
+}
+
+.header__menu-item.is-current::after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  aspect-ratio: 1;
+  width: 7px;
+  background-color: white;
+  border-radius: 50%;
+  left: 110%;
+  top: 45%;
+}
+
+.header__menu-item a {
+  display: inline-flex;
+  align-items: center;
+  height: 90px;
+  transition: 0.3s;
+}
+.header__menu-item a:hover {
+  color: #BABABA;
 }
 
 @media (max-width: 1280px) {
@@ -127,9 +258,12 @@ html, *, body {
 }
 @media (max-width: 1024px) {
   .header {
-    row-gap: 25px;
+    row-gap: 20px;
     flex-wrap: wrap;
     padding: 25px 55px 0px 55px;
+  }
+  .header__logo {
+    top: 0px;
   }
   .header__menu {
     flex-basis: 100%;
@@ -142,19 +276,32 @@ html, *, body {
     right: -50px;
     top: -120px;
   }
+  .header__logo::after {
+    top: -25px;
+  }
+  .header__menu-item a {
+    height: fit-content;
+  }
 }
 @media (max-width: 767px) {
   .header {
+    row-gap: 25px;
     padding: 25px 25px 0px 25px;
   }
   .header__menu-item {
     font-size: clamp(12px, 2.1vw, 16px);
+  }
+  .header__menu-item.is-current::after {
+    top: 22%;
   }
 }
 @media (max-width: 520px) {
   .header {
     padding: 10px 5px 0px 15px;
     row-gap: 30px;
+  }
+  .header__logo {
+    top: 10px;
   }
   .header__menu-list {
     flex-wrap: wrap;
@@ -169,6 +316,31 @@ html, *, body {
   .header__menu::before {
     display: none;
   }
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  box-sizing: content-box;
+}
+.info__left-wrapper {
+  max-width: 67.29vw;
+  padding-left: 5.1vw;
+  height: fit-content;
+}
+.info__title {
+  margin-bottom: 5px;
+}
+.info__subtitle {
+  margin-bottom: 5px;
+}
+.info__text {
+  max-width: 59%;
+  margin-bottom: 0.85em;
+}
+.info__img {
+  max-width: 40%;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

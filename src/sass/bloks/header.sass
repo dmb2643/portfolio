@@ -1,26 +1,55 @@
 .header
+    font-family: "inter"
     font-size: clamp(16px,1.6vw,20px)
     display: flex
     align-items: center
     justify-content: space-between
-    padding: 25px 85px 0px 85px
+    padding: 25px 25px 0px 85px
     max-height: 100px
+    &__logo
+        top: -10px
     &__menu-list
         display: flex
         column-gap: 37px
         font-weight: 700
         white-space: nowrap
 
+.header__menu-item.is-current
+    position: relative
+.header__menu-item.is-current::after
+    display: inline-block
+    position: absolute
+    content: ""
+    aspect-ratio: 1
+    width: 7px
+    background-color: white
+    border-radius: 50%
+    left: 110%
+    top: 45%
+    
+.header__menu-item a
+    display: inline-flex
+    align-items: center
+    height: 90px
+    text
+    transition: 0.3s
+.header__menu-item a:hover
+    color: #BABABA
+
+
+
 
 @media (max-width:1280px)
     .header__menu::before
         right: 1000%
-        
+  
 @media (max-width:1024px)
     .header
-        row-gap: 25px
+        row-gap: 20px   
         flex-wrap: wrap
         padding: 25px 55px 0px 55px
+        &__logo
+            top: 0px
         &__menu
             flex-basis: 100%
             &-list
@@ -30,16 +59,28 @@
         right: -50px
         top: -120px
 
+    .header__logo::after
+        top: -25px
+
+    .header__menu-item a
+        height: fit-content
+
 @media (max-width:767px)
     .header
+        row-gap: 25px
         padding: 25px 25px 0px 25px
         &__menu-item
             font-size: clamp(12px,2.10vw,16px)
+
+    .header__menu-item.is-current::after
+        top: 22%
 
 @media (max-width:520px)
     .header
         padding: 10px 5px 0px 15px
         row-gap: 30px
+        &__logo
+            top: 10px
         &__menu-list
             flex-wrap: wrap
             row-gap: 20px
