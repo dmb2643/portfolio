@@ -18,9 +18,36 @@ html,*,body
     display: flex
     justify-content: center
     align-items: center
-    font-size: 1.05vw
+    font-size: clamp(16px,1.05vw,20px)
     background: #ffffff
     color: #000000
     width: 11.25em
     height: 4.25em
     border-radius: 1.25em
+    transition: 0.25s
+.button:hover
+    opacity: 0.8
+    color: rgba(0, 0, 0, 1)
+
+a, img, input 
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) 
+    -webkit-focus-ring-color: rgba(0, 0, 0, 0)
+    
+a
+    -webkit-tap-highlight-color: transparent
+    outline: none
+    box-shadow: none
+    border: none
+    background: transparent
+    -webkit-tap-highlight-color: transparent
+
+a:focus:not(:focus-visible)
+    outline: none
+    box-shadow: none
+
+
+
+a:focus,img:focus,input:focus 
+    outline: none
+    box-shadow: none
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video playsinline autoplay src="src/video/Rick Astley — Never Gonna Give You Up.mp4">paokfjkwigjiwjgiwjgi</video>
+    <style>
+        
+        *,html{
+            scrollbar-width: none
+        }
+
+        body {
+            /*    display: flex;
+                justify-content: center;
+                align-items:center;
+                height: 100vh;
+                background: #000;
+                scrollbar-width: 1px;
+                scrollbar-color: none; */
+            margin: 0;
+            overflow: hidden; /* Отключаем скролл */
+        }
+
+        video {
+            /* width: 80%;
+            height: auto */
+            position: fixed; /* Фиксируем видео относительно экрана */
+            top: 0;
+            left: 0;
+            width: 100vw; /* Полная ширина экрана */
+            height: 100vh; /* Полная высота экрана */
+            object-fit: cover;
+            z-index: -1; /* Отправляем видео на задний план */
+        }
+
+    </style>
+</body>
+</html>
