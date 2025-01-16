@@ -7,6 +7,14 @@
 
 @font-face 
     font-family: "inter"
+    src: url(../fonts/InterSemiBold.woff2) format("woff2")
+    font-weight: 600
+    font-style: normal
+    font-display: swap
+
+
+@font-face 
+    font-family: "inter"
     src: url(../fonts/InterRegular.woff2) format("woff2")
     font-weight: 400
     font-style: normal
@@ -15,7 +23,12 @@
 .info
     font-family: "inter"
 
-
+.title
+    font-family: "inter"
+    text-align: center
+    width: 100% 
+    font-size: clamp(60px,5.28vw,86px)
+    font-weight: 700 
 .title-small
     font-weight: 700
     font-size: 3.4vw
@@ -33,6 +46,8 @@
         font-size: clamp(20px,3.92vw,40px)
     .section-text
         font-size: clamp(16px,2.44vw,25px)
+    
+
 
 @media (max-width: 520px)
     .title-small

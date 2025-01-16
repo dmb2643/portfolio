@@ -62,6 +62,7 @@ a {
 }
 
 html, *, body {
+  font-family: "inter";
   box-sizing: border-box;
   font-family: inner;
   scrollbar-width: none;
@@ -69,12 +70,11 @@ html, *, body {
   padding: 0;
   margin: 0;
   color: #FFFFFF;
-  background: #0E0E0E;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1400px;
+  width: 68vw;
 }
 
 .button {
@@ -119,10 +119,22 @@ a:focus, img:focus, input:focus {
   box-shadow: none;
 }
 
+@media (max-width: 1280px) {
+  .container {
+    width: 68vw;
+  }
+}
 @font-face {
   font-family: "inter";
   src: url(../fonts/InterBold.woff2) format("woff2");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "inter";
+  src: url(../fonts/InterSemiBold.woff2) format("woff2");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -135,6 +147,14 @@ a:focus, img:focus, input:focus {
 }
 .info {
   font-family: "inter";
+}
+
+.title {
+  font-family: "inter";
+  text-align: center;
+  width: 100%;
+  font-size: clamp(60px, 5.28vw, 86px);
+  font-weight: 700;
 }
 
 .title-small {
@@ -284,6 +304,7 @@ a:focus, img:focus, input:focus {
   justify-content: space-between;
   padding: 25px 25px 0px 85px;
   max-height: 200px;
+  background: #0E0E0E;
 }
 .header__logo {
   top: -10px;
@@ -395,6 +416,7 @@ a:focus, img:focus, input:focus {
   justify-content: space-between;
   padding-top: 100px;
   box-sizing: content-box;
+  background: #0E0E0E;
 }
 .info__left-wrapper {
   max-width: 67.29vw;
@@ -485,12 +507,105 @@ a:focus, img:focus, input:focus {
     margin-bottom: 1.5em;
   }
   .info__img {
-    margin-bottom: 150px;
+    margin-bottom: 110px;
   }
   .info__button {
     font-size: 12px;
     width: 10.25em;
     height: 4em;
+  }
+}
+.skills {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background: #121212;
+  max-height: 550px;
+}
+.skills__title {
+  margin-bottom: 0.55em;
+}
+.skills__figure {
+  width: 12.55vw;
+  height: 27vw;
+  align-self: center;
+}
+.skills__figure-2 {
+  justify-self: end;
+}
+.skills__wrapper {
+  padding-left: 4%;
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+  width: 100%;
+}
+.skills__wrapper-title {
+  font-family: "inter";
+  font-weight: normal;
+  margin-bottom: 0.3em;
+  font-size: clamp(28px, 2.21vw, 36px);
+  text-align: center;
+  border: 1px solid #ffffff;
+  padding: 0.3em 0.6em;
+}
+.skills__wrapper-line {
+  height: clamp(200px, 30vh, 252px);
+  width: 2px;
+}
+.skills__wrapper-text {
+  line-height: 1.25;
+  font-family: "inter";
+  text-align: center;
+  font-size: clamp(22px, 1.3vw, 24px);
+}
+
+@media (max-width: 1280px) {
+  .skills {
+    padding-block: 100px;
+  }
+  .skills__wrapper {
+    gap: 100px;
+  }
+}
+@media (max-width: 1024px) {
+  .skills__figure {
+    width: 10vw;
+    height: 213px;
+  }
+}
+@media (max-width: 768px) {
+  .skills {
+    grid-template-columns: 1fr;
+  }
+  .skills__figure {
+    height: auto;
+    display: none;
+  }
+  .skills__title {
+    font-size: 50px;
+  }
+  .skills__wrapper-title {
+    font-size: 22px;
+  }
+  .skills__wrapper-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 520px) {
+  .skills {
+    padding-top: 70px;
+    border-top: 0.1px solid #4b5350;
+  }
+  .skills__title {
+    margin-bottom: 0.85em;
+  }
+  .skills__wrapper {
+    gap: 40px;
+  }
+  .skills__wrapper-line {
+    height: 180px;
   }
 }
 

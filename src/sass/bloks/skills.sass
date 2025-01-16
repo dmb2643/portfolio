@@ -1,0 +1,81 @@
+.skills
+    padding-top: 50px
+    padding-bottom: 50px
+    display: grid
+    grid-template-columns: 1fr 2fr 1fr
+    background: #121212
+    max-height: 550px
+
+    &__title
+        margin-bottom: 0.55em
+    &__figure
+        width: 12.55vw
+        height: 27vw
+        align-self: center
+
+        &-2
+            justify-self: end
+    
+    &__wrapper
+        padding-left: 4%
+        display: flex
+        justify-content: center
+        gap: 15%
+        width: 100%
+        &-title
+            font-family: "inter"
+            font-weight: normal
+            margin-bottom: 0.3em
+            font-size: clamp(28px,2.21vw,36px)
+            text-align: center
+            border: 1px solid #ffffff
+            padding: 0.3em 0.6em
+        &-line
+            height: clamp(200px,30vh,252px)
+            width: 2px
+        &-text
+            line-height: 1.25
+            font-family: "inter"
+            text-align: center
+            font-size: clamp(22px,1.3vw,24px)
+
+@media (max-width: 1280px)
+    .skills
+        padding-block: 100px
+        &__wrapper
+            gap: 100px
+          
+@media (max-width: 1024px)
+    .skills
+        &__figure
+            width: 10vw
+            height: 213px
+
+@media (max-width: 768px)
+    .skills
+        grid-template-columns: 1fr
+        &__figure
+            height: auto
+            display: none
+        &__title
+            font-size: 50px
+    
+        &__wrapper
+            &-title
+                font-size: 22px 
+            &-text
+                font-size: 16px
+
+@media (max-width: 520px)
+    .skills
+        padding-top: 70px
+        border-top: 0.1px solid #4b5350
+        &__title
+            margin-bottom: 0.85em
+        &__wrapper
+            gap: 40px
+            &-line
+                height: 180px
+
+
+            
