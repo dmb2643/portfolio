@@ -27,7 +27,7 @@
     font-family: "inter"
     text-align: center
     width: 100% 
-    font-size: clamp(60px,5.28vw,86px)
+    font-size: clamp(60px,5.28vw,96px)
     font-weight: 700 
 .title-small
     font-weight: 700
@@ -40,6 +40,8 @@
     font-size: clamp(18px,1.30vw,45px)
 
 @media (max-width: 1024px)
+    .title
+        font-size: clamp(50px,6.25vw,65px)
     .title-small
         font-size: clamp(35px,6.70vw,68px)
     .subtitle
@@ -47,9 +49,13 @@
     .section-text
         font-size: clamp(16px,2.44vw,25px)
     
-
+@media (max-width: 768px)
+    .title
+        font-size: clamp(55px,6.25vw,65px)
 
 @media (max-width: 520px)
+    .title
+        font-size: 40px 
     .title-small
         width: 100%
         text-align: center

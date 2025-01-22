@@ -1,0 +1,101 @@
+.technology
+    padding: 100px 0px 250px
+    background: #0E0E0E
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+    &__title
+        padding-left: 0.9em
+        margin-bottom: 200px
+        line-height: 1.25
+    &__item
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &-icon
+            width: 140px
+            height: 170px
+        &-dash
+            background: #D9D9D9
+            width: 90px
+            height: 4px
+        &-text
+            width: 20em
+            font-family: "inter"
+            font-size: 40px
+            line-height: 1.25
+            
+          
+.technology__item:not(:last-child)
+    margin-bottom: 200px
+
+@media (max-width: 1450px)
+    .technology
+            &-text
+                font-size: clamp(20px,2.36vw,34px)
+            &-dash
+                width: clamp(60px,5.85vw,75px)
+@media (max-width: 1280px)
+    .technology
+        &__title
+            padding-left: 0px
+            margin-bottom: 130px
+        &__item
+            justify-content: space-evenly
+            &-text
+                font-size: clamp(20px,2.22vw,34px)
+
+            &-icon
+                width: clamp(70px,7.5vw,110px)
+                height: clamp(120px,11.05vw,160px)
+                margin: 0
+            &-dash
+                margin: 0
+                width: 65px
+
+
+    
+    
+
+@media (max-width: 1024px)
+    .technology
+        &__item
+            &-dash
+                width: clamp(42px,5.40vw,55px)
+                  
+    .technology__item:not(:last-child)
+        margin-bottom: 150px
+            
+    
+
+
+@media (max-width: 768px)
+    .technology
+        &__item
+            row-gap: 20px
+            flex-direction: column
+            &-dash
+                display: none
+            &-text
+                text-align: center
+                font-size: 27px
+            &-icon
+                width: 120px
+                height: 120px
+
+
+
+@media (max-width: 520px)
+    .technology
+        padding-bottom: 80px
+        &__item
+            &-text
+                text-align: center
+                font-size: 18px
+            &-icon
+                width: 90px
+                height: 90px
+
+    .technology__item:not(:last-child)
+        margin-bottom: 120px
