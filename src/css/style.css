@@ -177,6 +177,7 @@ a:focus, img:focus, input:focus {
 }
 
 .title-small {
+  font-family: "inter";
   font-weight: 700;
   font-size: 3.4vw;
   font-weight: 710;
@@ -212,7 +213,7 @@ a:focus, img:focus, input:focus {
 }
 @media (max-width: 520px) {
   .title {
-    font-size: 40px;
+    font-size: 35px;
   }
   .title-small {
     width: 100%;
@@ -506,20 +507,21 @@ a:focus, img:focus, input:focus {
   .info__subtitle {
     width: 100%;
     text-align: center;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.7em;
   }
   .info__text {
     max-width: 85%;
     text-align: center;
+    display: none;
   }
   .info__img {
     max-width: 100%;
     width: 100%;
     height: auto;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
   .info__button {
-    font-size: clamp(12px, 1.37vw, 20px);
+    font-size: clamp(12px, 1.57vw, 20px);
   }
 }
 @media (max-width: 520px) {
@@ -537,12 +539,13 @@ a:focus, img:focus, input:focus {
     margin-bottom: 1.5em;
   }
   .info__img {
-    margin-bottom: 110px;
+    margin-bottom: 60px;
   }
   .info__button {
     font-size: 12px;
-    width: 10.25em;
-    height: 4em;
+    width: 10em;
+    height: 3.5em;
+    margin-top: 10px;
   }
 }
 .skills {
@@ -639,7 +642,7 @@ a:focus, img:focus, input:focus {
   }
 }
 .technology {
-  padding: 100px 0px 250px;
+  padding: 200px 0px 400px;
   background: #0E0E0E;
   background-display: flex;
   background-flex-direction: column;
@@ -685,6 +688,9 @@ a:focus, img:focus, input:focus {
   }
 }
 @media (max-width: 1280px) {
+  .technology {
+    padding-bottom: 300px;
+  }
   .technology__title {
     padding-left: 0px;
     margin-bottom: 130px;
@@ -706,6 +712,9 @@ a:focus, img:focus, input:focus {
   }
 }
 @media (max-width: 1024px) {
+  .technology {
+    padding-bottom: 250px;
+  }
   .technology__item-dash {
     width: clamp(42px, 5.4vw, 55px);
   }
@@ -731,9 +740,6 @@ a:focus, img:focus, input:focus {
   }
 }
 @media (max-width: 520px) {
-  .technology {
-    padding-bottom: 80px;
-  }
   .technology__item-text {
     text-align: center;
     font-size: 18px;
@@ -744,6 +750,138 @@ a:focus, img:focus, input:focus {
   }
   .technology__item:not(:last-child) {
     margin-bottom: 120px;
+  }
+}
+.price {
+  display: block;
+  padding-top: 26px;
+  padding-bottom: 150px;
+  border-top: 1px solid #4D4D4D;
+  background: #0E0E0E;
+}
+.price__title {
+  font-weight: 400;
+  padding-bottom: 50px;
+}
+.price__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px 6.785vw;
+  padding-bottom: 80px;
+}
+.price__contact {
+  margin-bottom: 0.67em;
+}
+.price__arrow {
+  position: relative;
+  left: 31vw;
+  height: 14vw;
+}
+
+.price__item {
+  border: 1px solid #FFFFFF;
+}
+.price__item-title {
+  padding-left: 1.83em;
+  padding-top: 18px;
+  margin-bottom: 0.23em;
+  font-family: "inter";
+  font-size: clamp(24px, 1.83vw, 46px);
+  font-weight: 700;
+}
+.price__item-text {
+  font-family: "inter";
+  line-height: 1.5;
+  font-size: clamp(17px, 1.25vw, 32px);
+  padding-left: 2.75em;
+  margin-bottom: 0.83em;
+}
+.price__item-dash {
+  width: 100%;
+  border: 1px solid #FFFFFF;
+}
+.price__item-desc {
+  font-size: clamp(18px, 1.25vw, 32px);
+  padding-top: 0.2em;
+  padding: 0.4em 1.2em;
+}
+
+@media (max-width: 1280px) {
+  .price__title {
+    font-size: clamp(40px, 3.9vw, 45px);
+    padding-bottom: 30px;
+  }
+  .price__item-title {
+    padding-left: 0.7em;
+  }
+  .price__item-text {
+    padding-left: 1.25em;
+    font-size: clamp(15px, 1.46vw, 17px);
+  }
+}
+@media (max-width: 1024px) {
+  .price__title {
+    font-size: clamp(25px, 3.9vw, 35px);
+    padding-bottom: 30px;
+  }
+  .price__contact {
+    font-size: clamp(45px, 6vw, 55px);
+  }
+  .price__item-title {
+    padding-top: 14px;
+    padding-left: 0.4em;
+    font-size: clamp(16px, 1.83vw, 22px);
+  }
+  .price__item-text {
+    padding-left: 0.7em;
+    font-size: clamp(11px, 1.46vw, 15px);
+  }
+  .price__item-desc {
+    font-size: clamp(12px, 1.58vw, 16px);
+  }
+}
+@media (max-width: 767px) {
+  .price {
+    padding-top: 80px;
+  }
+  .price__contact {
+    font-size: clamp(36px, 7.8vw, 65px);
+    margin-bottom: 2em;
+  }
+  .price__arrow {
+    left: 45vw;
+    height: 150px;
+  }
+  .price__container {
+    width: 100%;
+  }
+  .price__title {
+    font-size: clamp(33px, 7vw, 55px);
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  .price__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .price__item {
+    border-radius: 10px;
+    padding: 5px 20px;
+    width: fit-content;
+  }
+  .price__item-title {
+    padding-left: 0;
+    font-size: 4.5vw;
+  }
+  .price__item-text {
+    padding-left: 0;
+    font-size: 3.6vw;
+  }
+  .price__item-desc {
+    font-size: 3.6vw;
+    padding: 0.5em 0;
   }
 }
 

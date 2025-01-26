@@ -1,0 +1,115 @@
+.price
+    display: block
+    padding-top: 26px
+    padding-bottom: 150px
+    border-top: 1px solid #4D4D4D
+    background: #0E0E0E
+    &__title
+        font-weight: 400
+        padding-bottom: 50px
+    &__wrapper
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        gap: 100px 6.785vw
+        padding-bottom: 80px
+    &__contact
+        margin-bottom: 0.67em
+    &__arrow
+        position: relative
+        left: 31vw
+        height: 14vw
+
+
+
+.price__item
+    border: 1px solid #FFFFFF
+    &-title
+        padding-left: 1.83em
+        padding-top: 18px
+        margin-bottom: 0.23em
+        font-family: "inter"
+        font-size: clamp(24px,1.83vw,46px)
+        font-weight: 700
+    &-text
+        font-family: "inter"
+        line-height: 1.5
+        font-size: clamp(17px,1.25vw,32px)
+        padding-left: 2.75em
+        margin-bottom: 0.83em
+    &-dash
+        width: 100%
+        border: 1px solid #FFFFFF
+    &-desc
+        font-size: clamp(18px,1.25vw,32px)
+        padding-top: 0.2em
+        padding: 0.4em 1.2em 
+
+
+@media (max-width: 1280px)
+    .price
+        &__title
+            font-size: clamp(40px,3.90vw,45px)
+            padding-bottom: 30px
+
+        &__item
+            &-title
+                padding-left: 0.7em
+            &-text
+                padding-left: 1.25em
+                font-size: clamp(15px,1.46vw,17px)
+
+
+@media (max-width: 1024px)
+    .price
+        &__title
+            font-size: clamp(25px,3.90vw,35px)
+            padding-bottom: 30px
+        &__contact
+            font-size: clamp(45px, 6vw, 55px)
+
+        &__item
+            &-title
+                padding-top: 14px
+                padding-left: 0.4em
+                font-size: clamp(16px, 1.83vw, 22px)
+            &-text
+                padding-left: 0.7em
+                font-size: clamp(11px,1.46vw,15px)
+                // font-size: 12px
+            &-desc
+                font-size: clamp(12px,1.58vw,16px)
+
+@media (max-width: 767px)
+    .price
+        padding-top: 80px
+        &__contact
+            font-size: clamp(36px, 7.8vw, 65px)
+            margin-bottom: 2em
+        &__arrow
+            left: 45vw
+            height: 150px
+        &__container
+            width: 100%
+        &__title
+            font-size: clamp(33px, 7vw, 55px)
+            padding-bottom: 50px
+            text-align: center
+        &__wrapper
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+
+        &__item
+            border-radius: 10px
+            padding: 5px 20px
+            width: fit-content
+            &-title
+                padding-left: 0
+                font-size: 4.5vw
+            &-text
+                padding-left: 0
+                font-size: 3.6vw
+            &-desc
+                font-size: 3.6vw
+                padding: 0.5em 0
