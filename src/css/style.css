@@ -640,6 +640,11 @@ a:focus, img:focus, input:focus {
   .skills__wrapper-line {
     height: 180px;
   }
+  .skills__wrapper-title {
+    font-size: 26px;
+    font-weight: bold;
+    border: 0;
+  }
 }
 .technology {
   padding: 200px 0px 400px;
