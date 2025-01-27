@@ -1,7 +1,7 @@
 .price
     display: block
-    padding-top: 26px
-    padding-bottom: 150px
+    padding-top: 106px
+    padding-bottom: 350px
     border-top: 1px solid #4D4D4D
     background: #0E0E0E
     &__title
@@ -106,10 +106,28 @@
             width: fit-content
             &-title
                 padding-left: 0
-                font-size: 4.5vw
+                font-size: clamp(16px,4.5vw,30px)
             &-text
                 padding-left: 0
-                font-size: 3.6vw
+                font-size: clamp(12px,4.5vw,25px)
             &-desc
-                font-size: 3.6vw
+                font-size: clamp(12px,4.5vw,25px)
+                padding: 0.5em 0
+
+
+
+@media (max-width: 520px)
+    .price
+        padding-bottom: 140px
+        &__arrow
+            height: 120px
+        &__item
+            &-title
+                padding-left: 0
+                font-size: 18px
+            &-text
+                padding-left: 0
+                font-size: 14px
+            &-desc
+                font-size: 14px
                 padding: 0.5em 0
